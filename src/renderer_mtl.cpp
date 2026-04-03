@@ -1712,6 +1712,11 @@ static_assert(BX_COUNTOF(s_accessNames) == Access::Count, "Invalid s_accessNames
 			return false;
 		}
 
+		bool waitForSwapchain() override
+		{
+			return false;
+		}
+
 		void flip() override
 		{
 			if (NULL == m_commandBuffer)
